@@ -10,11 +10,51 @@
     <h1>Salary Calculator</h1>
   </header>
   <main>
-    <h2>Add Employee</h2>
-    <h2>Employees</h2>
+    <section>
+      <h2>Add Employee</h2>
+      <form id="employeeForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" data-testid="firstNameInput" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" data-testid="lastNameInput" required>
+
+        <label for="id">Employee ID:</label>
+        <input type="number" id="id" name="id" data-testid="idInput" required>
+
+        <label for="title">Job Title:</label>
+        <input type="text" id="title" name="title" data-testid="titleInput" required>
+
+        <label for="salary">Annual Salary:</label>
+        <input type="number" id="salary" name="salary" data-testid="annualSalaryInput" required>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Employees</h2>
+      <table id="employeeTable">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>ID</th>
+            <th>Job Title</th>
+            <th>Annual Salary</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </section>
   </main>
+
   <footer>
-    <p>Total Monthly</p>
+    <p>Total Monthly Cost: <span id="totalMonthly">$0</span></p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
